@@ -18,9 +18,12 @@ public class UEResources {
         ).build() ;
     }
 
+
+    @Path("/ajout")
+    @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-    public Response ajout(UnitEnseignement ue)
+    public Response ajout(UniteEnseignement ue)
     {
         if(helper.addUniteEnseignement(ue))
         { return Response.status(201).etity("added successfully")}
